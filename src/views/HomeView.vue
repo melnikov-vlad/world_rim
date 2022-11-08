@@ -1,18 +1,18 @@
 <template>
     <div class="main_wrapper">
       <div class="background_wrapper">
-        <div>
-          <h1 class="hero_text">Великий світ Ріка та Морті</h1>
-        </div>
-        <label for="search">
+        <h1 class="hero_text">Великий світ Ріка та Морті</h1>
+        <label class="search_wrapper" for="search">
           <div>
             <h2 class="hero_task_text">Давай число від 1 до 826 і подивимося який персонаж тобі випаде</h2>
           </div>
-          <input v-model="numberPerson" class="inp_search" type="text" name="findphrases" id="search" placeholder="Вводи число">
+        <input v-model="numberPerson" class="inp_search" type="text" name="findphrases" id="search" placeholder="Введи число">
         </label>
         <br>
-        <button class="btn_search" @click="searchNumberPerson">Почнемо пошук</button>
-        <button class="btn_search" @click="">Випадкова персонаж</button>
+        <div class="btn_wrapper">
+          <button class="btn_search" @click="searchNumberPerson">Почнемо пошук</button>
+          <!-- <button class="btn_search" @click="">Випадкова персонаж</button> -->
+        </div>
         <!-- if we have single person -->
         <div class="main_img" v-if="persone.name">
           <img class="img_found" :src="persone.image" :alt="persone.name">
@@ -24,7 +24,13 @@
               <h4>Стать: {{ persone.gender }}</h4>
             </li>
             <li>
-              <h5>Життєвий статус: {{ persone.status }}</h5>
+              <h4>Життєвий статус: {{ persone.status }}</h4>
+            </li>
+            <li>
+              <h4>Вид істот: {{ persone.species }}</h4>
+            </li>
+            <li>
+              <h4>Останнє місце знаходження: {{ persone.origin.name }}</h4>
             </li>
           </ul>
         
@@ -32,7 +38,7 @@
         <!-- if we have a list of the persones -->
         <div v-if="persones.length && !persone.name" v-for="onePers in persones" :key="persones.id">
           <img :src="onePers.image" :alt="onePers.name">
-          <h3>{{ onePers.name }}</h3>
+          <h3>{{ onePers.name }}</h3> type
         </div>
         <!-- <div>
                                   <img :src="persones.image" :alt="persones.name">
