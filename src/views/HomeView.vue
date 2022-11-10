@@ -18,19 +18,19 @@
           <img class="img_found" :src="persone.image" :alt="persone.name">
           <ul class="img_info_found">
             <li>
-              <h3>Ім'я: {{ persone.name }}</h3>
+              <h3>Ім'я: <span class="img_decor">{{ persone.name }}</span></h3>
             </li>
             <li>
-              <h4>Стать: {{ persone.gender }}</h4>
+              <h4>Стать: <span class="img_decor">{{ persone.gender }}</span></h4>
             </li>
             <li>
-              <h4>Життєвий статус: {{ persone.status }}</h4>
+              <h4>Життєвий статус: <span class="img_decor">{{ persone.status }}</span></h4>
             </li>
             <li>
-              <h4>Вид істот: {{ persone.species }}</h4>
+              <h4>Вид істот: <span class="img_decor">{{ persone.species }}</span></h4>
             </li>
             <li>
-              <h4>Останнє місце знаходження: {{ persone.origin.name }}</h4>
+              <h4>Останнє місце знаходження: <span class="img_decor">{{ persone.origin.name }}</span></h4>
             </li>
           </ul>
         
