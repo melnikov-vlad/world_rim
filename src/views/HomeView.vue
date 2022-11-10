@@ -36,10 +36,10 @@
         
         </div>
         <!-- if we have a list of the persones -->
-        <div v-if="persones.length && !persone.name" v-for="onePers in persones" :key="persones.id">
+        <!-- <div v-if="persones.length && !persone.name" v-for="onePers in persones" :key="persones.id">
           <img :src="onePers.image" :alt="onePers.name">
           <h3>{{ onePers.name }}</h3> type
-        </div>
+        </div> -->
         <!-- <div>
                                   <img :src="persones.image" :alt="persones.name">
                                   <h3>{{ persones.name }}</h3>

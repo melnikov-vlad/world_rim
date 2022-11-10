@@ -7,13 +7,26 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #2f4f4f87;
+    background-color: #1c2b2b87;
     color: #24d519;
     padding: 15px;
     border: 4px solid #21f1cb9e;
     font-family: cursive;
     font-size: large;
 
+        .nav_border {
+            color: #03f4f4;
+        }
+
+        .nav_router_link {
+            text-align: center;
+        }
+
+        .nav_router_link:hover {
+            color: hsl(116, 100%, 50%);
+            outline-style: outset;
+            outline-color: #e8f403;
+        }
 }
 .logo_img {
   width: 100%;
