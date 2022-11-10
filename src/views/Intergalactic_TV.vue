@@ -12,25 +12,5 @@
 </template>
 
 <style lang="scss" scoped>
-.show_tv {
-  width: 100%;
-  height: 100vh;
-  margin: 0 auto;
-  
-    .body_wrapper {
-      background-image: url(../assets/image/r&m_4.jpg);
-      background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100%;
 
-          .video_player{
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 100px;
-            
-          }
-    }
-}
 </style>
