@@ -121,19 +121,22 @@ img {
   height: 100vh;
 }
 .main_wrapper .background_wrapper {
-  background-image: url(../image/r&m_1.jpg);
+  background-image: url(../image/r_m_1.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100%;
 }
 
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .btn_search {
   margin-bottom: 20px;
   margin-left: 20px;
   padding: 5px;
-  margin-left: 50%;
-  transform: translateX(-50%);
 }
 
 .hero_text {
@@ -188,7 +191,7 @@ img {
   margin: 0 auto;
 }
 .show_tv .body_wrapper {
-  background-image: url(../image/r&m_4.jpg);
+  background-image: url(../image/r_m_4.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -80,7 +80,7 @@
     
 
         .background_wrapper {
-            background-image: url(../image/r&m_1.jpg);
+            background-image: url(../image/r_m_1.webp);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -91,17 +91,19 @@
     
 }
 
-// .btn_wrapper {
-//     margin-left: 50%;
-//     transform: translateX(-50%);
-// }
+.btn_wrapper {
+    display: flex;
+    // margin-left: 50%;
+    // transform: translateX(-50%);
+    justify-content: center;
+}
 
 .btn_search {
     margin-bottom: 20px;
     margin-left: 20px;
     padding: 5px;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    // margin-left: 50%;
+    // transform: translateX(-50%);
 }
 
 .hero_text {
@@ -160,7 +162,7 @@
   margin: 0 auto;
   
     .body_wrapper {
-      background-image: url(../image/r&m_4.jpg);
+      background-image: url(../image/r_m_4.webp);
       background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

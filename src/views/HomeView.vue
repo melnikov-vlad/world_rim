@@ -11,7 +11,7 @@
         <br>
         <div class="btn_wrapper">
           <button class="btn_search" @click="searchNumberPerson">Почнемо пошук</button>
-          <!-- <button class="btn_search" @click="">Випадкова персонаж</button> -->
+          <button class="btn_search" @click="">Випадковий персонаж</button>
         </div>
         <!-- if we have single person -->
         <div class="main_img" v-if="persone.name">
@@ -62,7 +62,7 @@ export default {
       persones: [],
       persone: {},
       numberPerson: '',
-
+      randomPerson: ''
     }
   },
   props: {
@@ -71,6 +71,8 @@ export default {
   },
   async mounted() {
     // this.searchAllPerson();
+    this.random();
+    console.log(this.random());
   },
   methods: {
     async searchNumberPerson() {
@@ -78,22 +80,15 @@ export default {
       const persone = await res.json();
       this.persone = persone;
     },
-    async searchAllPerson() {
-      const res = await fetch(URL);
-      const persones = await res.json();
-      this.persones = persones.results;
-    },
-    // async randomNumber() {
-    //   min = Math.ceil(1);
-    //   max = Math.floor(826);
-    //   return Math.floor(Math.random() * (max - min + 1) + min);
-    //   console.log(min);
+    // async searchAllPerson() {
+    //   const res = await fetch(URL);
+    //   const persones = await res.json();
+    //   this.persones = persones.results;
     // },
-    // async randomSearch() {
-    //   const res = await fetch(URL + randomNumber());
-    //   const persone = await res.json();
-    //   this.persone = persone;
-    // }
+    random () {
+      return Math.floor(Math.random() * (826 - 1 + 1)) + 1;
+    },
+    
   }
 }
 </script>
