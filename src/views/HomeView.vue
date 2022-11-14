@@ -11,7 +11,6 @@
         <br>
         <div class="btn_wrapper">
           <button class="btn_search" @click="searchNumberPerson">Почнемо пошук</button>
-          <button class="btn_search" @click="">Випадковий персонаж</button>
         </div>
         <!-- if we have single person -->
         <div class="main_img" v-if="persone.name">
@@ -33,17 +32,11 @@
               <h4>Останнє місце знаходження: <span class="img_decor">{{ persone.origin.name }}</span></h4>
             </li>
           </ul>
-        
         </div>
-        <!-- if we have a list of the persones -->
-        <!-- <div v-if="persones.length && !persone.name" v-for="onePers in persones" :key="persones.id">
-          <img :src="onePers.image" :alt="onePers.name">
-          <h3>{{ onePers.name }}</h3> type
-        </div> -->
-        <!-- <div>
-                                  <img :src="persones.image" :alt="persones.name">
-                                  <h3>{{ persones.name }}</h3>
-                              </div> -->
+        <!-- if we have a error of the persones -->
+        <div class="error_wrapper">
+          <h3 class="text_error_wrapper">{{ persone.error }}</h3>
+        </div>
       </div>
     </div>
 </template>
@@ -51,7 +44,7 @@
 <script>
 const URL = 'https://rickandmortyapi.com/api/character/';
 export default {
-  name: 'bad_page',
+  name: 'main_page',
   components: {
   },
   props: {
@@ -61,8 +54,7 @@ export default {
     return {
       persones: [],
       persone: {},
-      numberPerson: '',
-      randomPerson: ''
+      numberPerson: '' 
     }
   },
   props: {
@@ -70,25 +62,14 @@ export default {
     default: '',
   },
   async mounted() {
-    // this.searchAllPerson();
-    this.random();
-    console.log(this.random());
+
   },
   methods: {
     async searchNumberPerson() {
       const res = await fetch(URL + this.numberPerson);
       const persone = await res.json();
       this.persone = persone;
-    },
-    // async searchAllPerson() {
-    //   const res = await fetch(URL);
-    //   const persones = await res.json();
-    //   this.persones = persones.results;
-    // },
-    random () {
-      return Math.floor(Math.random() * (826 - 1 + 1)) + 1;
-    },
-    
+    }
   }
 }
 </script>

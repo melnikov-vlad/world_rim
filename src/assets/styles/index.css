@@ -163,7 +163,7 @@ img {
 
 .img_found {
   width: 30%;
-  max-width: 300px;
+  max-width: 250px;
   border: 4px solid #24d519;
 }
 
@@ -205,11 +205,28 @@ img {
   top: 100px;
 }
 
+.error_wrapper {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  padding: 15px;
+}
+.error_wrapper .text_error_wrapper {
+  color: red;
+  background-color: darkgreen;
+}
+
 @media screen and (max-width: 530px) {
   .main_img {
     flex-direction: column;
   }
   .img_info_found {
     padding: 0;
+  }
+  .error_wrapper {
+    width: 60%;
   }
 }/*# sourceMappingURL=index.css.map */
