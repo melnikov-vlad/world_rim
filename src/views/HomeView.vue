@@ -6,7 +6,7 @@
           <div>
             <h2 class="hero_task_text">Давай число від 1 до 826 і подивимося який персонаж тобі випаде</h2>
           </div>
-        <input v-model="numberPerson" class="inp_search" type="text" name="findphrases" id="search" placeholder="Введи число">
+          <input v-model="numberPerson" class="inp_search" type="text" name="findphrases" id="search" placeholder="Введи число">
         </label>
         <br>
         <div class="btn_wrapper">
